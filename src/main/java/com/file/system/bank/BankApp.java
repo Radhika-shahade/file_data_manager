@@ -11,9 +11,11 @@ public class BankApp {
     public static void main(String[] args) {
         TransactionFileReader fileReader= new TransactionFileReader();
         List<BankTransaction> bankTransactionList=fileReader.read("src/main/resources/bank_transactions.csv");
-        TransactionByGenderMetrics metrics = new TransactionByGenderMetrics();
-        metrics.collect(bankTransactionList);
+//        TransactionByGenderMetrics metrics = new TransactionByGenderMetrics();
+//        metrics.collect(bankTransactionList);
+//        TransactionByDate date = new TransactionByDate();
+//        date.collect(bankTransactionList);
         TransactionByDate date = new TransactionByDate();
-        date.collect(bankTransactionList);
+        date.collect(bankTransactionList,60, 70);
     }
 }
