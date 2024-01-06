@@ -4,6 +4,6 @@ import com.file.system.bank.model.BankTransaction;
 
 import java.util.List;
 
-public interface MetricsCollector {
+public interface MetricsCollector  {
     void collect(List<BankTransaction>transactions);
 }
